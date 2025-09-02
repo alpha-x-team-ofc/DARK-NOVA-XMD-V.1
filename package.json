@@ -1,13 +1,15 @@
 {
-  "name": "DARK-NOVA-XMD",
-  "version": "1.0.0",
-  "description": "A WhatsApp Bot Created By Alpa x team",
-  "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name DARK-NOVA-XMD",
-    "stop": "pm2 stop DARK-NOVA-XMD",
-    "restart": "pm2 restart DARK-NOVA-XMD"
-  },
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"No tests specified\" && exit 0",
+    "lint": "eslint . --ext .js || exit 0",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop DARK-NOVA-XMD",
+    "pm2:restart": "pm2 restart DARK-NOVA-XMD",
+    "pm2:logs": "pm2 logs DARK-NOVA-XMD"
+  }
+},
   "dependencies": {
     "@whiskeysockets/baileys": "6.7.18",
     "@adiwajshing/keyed-db": "^0.2.4",
